@@ -1,7 +1,10 @@
-let myDate = new Date()
-console. log (myDate.toString());
-console. log (myDate.toDateString());
-console. log (myDate.toLocaleString());
-console. log (myDate.toJSON());
-console. log (myDate.toISOString());
-console. log (myDate.toLocaleDateString());
+// Creating a new Date object
+let myDate = new Date();
+
+// Displaying various date formats with descriptions
+console.log(`Full Date and Time (toString()): ${myDate.toString()}`);
+console.log(`\nDate in Readable Format (toDateString()): ${myDate.toDateString()}`);
+console.log(`\nLocalized Date & Time (toLocaleString()): ${myDate.toLocaleString()}`);
+console.log(`\nJSON Format (toJSON()): ${myDate.toJSON()}`);
+console.log(`\nISO Format (toISOString()): ${myDate.toISOString()}`);
+console.log(`\nLocalized Date Only (toLocaleDateString()): ${myDate.toLocaleDateString()}`);
