@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+    <link rel="stylesheet" href="simple-calculator-project.css">
 </head>
 
 <body>
 
-    <label for="value1">Enter value 1: <input name="value1" id="val1" type="number"></label>
-    <br><br>
-    <label for="value2">Enter value 2: <input name="value2" id="val2" type="number"></label>
-    <br><br>
+    <div class="valueContainer">
+        <label for="value1">Enter value 1: <input name="value1" id="val1" type="number"></label>
+        <label for="value2">Enter value 2: <input name="value2" id="val2" type="number"></label>
+    </div>
     <label for="operator">Select operator:</label>
     <select id="operator">
         <option disabled selected>operators</option>
@@ -21,11 +22,11 @@
         <option value="*">*</option>
         <option value="/">/</option>
     </select>
-    <br><br>
+    <!-- <br><br> -->
     <input onclick="submitBtn()" type="button" value="submit">
 
     <!-- Added a div to display results -->
-    <br><br>
+    <!-- <br><br> -->
     <span>Result: </span>
     <span id="result"></span>
 
