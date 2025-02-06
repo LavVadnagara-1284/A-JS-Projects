@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Project</title>
+</head>
+<body>
+    <button onclick="addNumber()">Add Number</button>
+    <ul id="numberList">
+        <!-- List items will be displayed here -->
+    </ul>
+
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+
+        // Function to display the list
+        function displayList() {
+            var ul = document.getElementById('numberList');
+            ul.innerHTML = ''; // Clear the existing list
+            for (var i = 0; i < arr.length; i++) {
+                ul.innerHTML += `<li>${arr[i]}</li>`;
+            }
+        }
+
+        // Display the initial list
+        displayList();
+
+        // Function to add a new number to the array
+        function addNumber() {
+            var nextNumber = arr.length + 1;
+            arr.push(nextNumber); // Add the next number to the array
+            displayList(); // Update the list display
+        }
+    </script>
+</body>
+</html>

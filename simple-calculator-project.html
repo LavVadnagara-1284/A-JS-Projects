@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+
+    <label for="value1">Enter value 1: <input name="value1" id="val1" type="number"></label>
+    <br><br>
+    <label for="value2">Enter value 2: <input name="value2" id="val2" type="number"></label>
+    <br><br>
+    <label for="operator">Select operator:</label>
+    <select id="operator">
+        <option disabled selected>operators</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br><br>
+    <input onclick="submitBtn()" type="button" value="submit">
+
+    <!-- Added a div to display results -->
+    <br><br>
+    <span>Result: </span>
+    <span id="result"></span>
+
+    <script>
+        function submitBtn() {
+            let val1 = parseInt(document.querySelector("#val1").value);  // Use parseFloat for decimals
+            let val2 = parseInt(document.querySelector("#val2").value);
+            let operator = document.querySelector("#operator").value;
+            let result = "";
+
+            if (isNaN(val1) || isNaN(val2)) {
+                result = "Error: Please enter valid numbers for both values.";
+            } else {
+                switch (operator) {
+                    case '+':
+                        result = `Addition = ${val1 + val2}`;
+                        break;
+                    case '-':
+                        result = `Subtraction = ${val1 - val2}`;
+                        break;
+                    case '*':
+                        result = `Multiplication = ${val1 * val2}`;
+                        break;
+                    case '/':
+                        if (val2 === 0) {
+                            result = "Error: Division by zero.";
+                        } else {
+                            result = `Division = ${val1 / val2}`;
+                        }
+                        break;
+                    default:
+                        result = "Error: Please select a valid operator.";
+                        break;
+                }
+            }
+
+            // Output the result in the 'result' span.
+            document.querySelector("#result").textContent = result;
+        }
+    </script>
+
+</body>
+
+</html>

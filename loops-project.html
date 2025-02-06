@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>loops project</title>
+</head>
+
+<body>
+    <script>
+        document.write(`=> This is the for loop output: <br> `);
+        for (let i = 0; i < 10; i++) {
+            document.write(`${i + 1} `);
+        }
+
+        document.write(`<br><br> => This is the while loop output: <br> `);
+        let j = 0;
+        while (j < 10) {
+            document.write(`${j + 1} `);
+            j++;
+        }
+
+        document.write(`<br><br> => This is the do while loop output: <br> `);
+        let k = 0;
+        do {
+            document.write(`${k + 1} `);
+            k++;
+        } while (k < 10);
+
+        document.write(`<br><br> => This is the forEach loop output: <br> `);
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        numbers.forEach(num => document.write(`${num*2} `));
+        
+        document.write(`<br><br> => This is the forEach diff syntax loop output: <br> `);
+        let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        numbers.forEach((num) => {
+            document.write(`${num} `)
+        });
+
+        document.write(`<br><br> => This is the for (with in keyword for object) loop output: <br> `);
+        let person = {
+            name: "John Doe",
+            age: 30,
+            city: "New York"
+        };
+        for (let prop in person) {
+            document.write(`${prop}: ${person[prop]}<br>`);
+        }
+    </script>
+</body>
+
+</html>
