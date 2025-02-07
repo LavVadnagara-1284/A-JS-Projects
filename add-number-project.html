@@ -6,7 +6,8 @@
     <title>Array Project</title>
 </head>
 <body>
-    <button onclick="addNumber()">Add Number</button>
+    <button onclick="addOneNumber()">Add 1 Number</button>
+    <button onclick="addFiveNumbers()">Add 5 Numbers</button>
     <ul id="numberList">
         <!-- List items will be displayed here -->
     </ul>
@@ -27,10 +28,17 @@
         displayList();
 
         // Function to add a new number to the array
-        function addNumber() {
-            var nextNumber = arr.length + 1;
-            arr.push(nextNumber); // Add the next number to the array
-            displayList(); // Update the list display
+        function addOneNumber() {
+                var nextNumber = arr.length + 1;
+                arr.push(nextNumber); // Add the next number to the array
+                displayList(); // Update the list display
+        }
+        function addFiveNumbers() {
+            for (let i = 0; i < 5; i++) {
+                var nextNumber = arr.length + 1;
+                arr.push(nextNumber); // Add the next five numbers to the array
+                displayList(); // Update the list display
+            }
         }
     </script>
 </body>
