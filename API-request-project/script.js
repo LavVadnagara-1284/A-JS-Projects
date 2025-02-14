@@ -24,7 +24,8 @@ function getData() {
     // cardDescription.setAttribute('id', 'card-description');
     // container.append(loading, cardImage, cardTitle, cardUsername, cardGitRepo, cardDescription);
 
-    const requestUrl = 'https://api.github.com/users/LavVadnagara-1284'
+    // const requestUrl = 'https://api.github.com/users/LavVadnagara-1284'
+    const requestUrl = 'https://gitlab.com/api/v4/users?username=USERNAME'
     console.log("Requesting data...");
 
     // loading.textContent = "Requesting data...";
@@ -73,16 +74,17 @@ function createElement(tag, id, text = '') {
 }
 
 function displayProfileCard(container, data) {
+    let cardTitle = createElement("h2", "card-title", data.name || "No Name Found");
+
     let cardImage = createElement("img", "card-image");
     cardImage.src = data.avatar_url || "";
     cardImage.alt = "GitHub Profile Image";
 
-    let cardTitle = createElement("h2", "card-title", data.name || "No Name Found");
     let cardUsername = createElement("p", "card-username", `Username: ${data.login || "No Username Found"}`);
     let cardGitRepo = createElement("p", "card-gitrepo", `Total Git Repos: ${data.public_repos || "No Repo Data"}`);
     let cardDescription = createElement("p", "card-description", `Bio: ${data.bio || "No bio available."}`);
 
-    container.append(cardImage, cardTitle, cardUsername, cardGitRepo, cardDescription);
+    container.append(cardTitle, cardImage, cardUsername, cardGitRepo, cardDescription);
 }
 
 // Function to show an error message with a retry button
