@@ -24,8 +24,7 @@ function getData() {
     // cardDescription.setAttribute('id', 'card-description');
     // container.append(loading, cardImage, cardTitle, cardUsername, cardGitRepo, cardDescription);
 
-    // const requestUrl = 'https://api.github.com/users/LavVadnagara-1284'
-    const requestUrl = 'https://gitlab.com/api/v4/users?username=USERNAME'
+    const requestUrl = 'https://api.github.com/users/LavVadnagara-1284'
     console.log("Requesting data...");
 
     // loading.textContent = "Requesting data...";
